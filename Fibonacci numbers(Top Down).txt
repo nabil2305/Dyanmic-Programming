@@ -1,0 +1,81 @@
+/*You are given a number. You need to find Fibonacci(number).USING MEMOIZATION
+
+Input Format:
+The first line of input contains testcases number. . Each testcase contains a number.
+
+Output Format:
+For each testcase, in a newline, print the numberth fibonacci number.
+
+Your Task:
+You don't need to take any input. You have to complete the function findNthFibonacci.
+
+Constraints:
+1 <= testcases <= 100
+1 <= number <= 92
+
+Examples:
+Input:
+2
+5
+7
+Output:
+5
+13 */
+
+
+//Initial Template for Java
+
+
+
+/*package whatever //do not write package name here */
+
+import java.io.*;
+import java.util.*;
+class GFG {
+	public static void main (String[] args) 
+	{
+	    Scanner sc=new Scanner(System.in);
+	    int testcases=sc.nextInt();
+	    Geeks.dp[0]=0;
+	    Geeks.dp[1]=1;
+	    Geeks.dp[2]=1;
+	    while(testcases-->0)
+	    {
+	        int number=sc.nextInt();
+	        
+	        Geeks obj=new Geeks();
+	        System.out.println(obj.findNthFibonacci(number));
+	        
+	    }
+	}
+}
+
+
+
+
+ // } Driver Code Ends
+//User function Template for Java
+
+
+
+class Geeks
+{
+    static long dp[] = new long[100];
+    
+    //Complete this function
+    public long findNthFibonacci(int number)
+    {
+      if(dp[number]>0)
+      return dp[number];
+      
+    dp[number]=findNthFibonacci(number-1)+findNthFibonacci(number-2);
+      return dp[number];
+    }
+
+}
+
+
+// { Driver Code Starts.
+
+
+  // } Driver Code Ends

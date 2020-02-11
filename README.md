@@ -1,2 +1,2 @@
-# Dynamoc-Programming
+
 # Dyanmic-Programming
